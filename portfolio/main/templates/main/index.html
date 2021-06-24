@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bens Photography</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'main/css/main.css' %}" />
+		<link rel="shortcut icon" type="image/png" href="{% static 'main/images/camera.png' %}">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Home</a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner" class="bg-img" data-bg="DurdleDoor.jpg">
+				<div class="inner">
+					<header>
+						<h1>Welcome</h1>
+						<h1>I'm Ben</h1>
+					</header>
+				</div>
+				<a href="#one" class="more">Learn More</a>
+			</section>
+
+		<!-- Journey -->
+			<section id="three" class="wrapper post bg-img" data-bg="beach.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>The Start Of My Journey</h2>
+							<p>14.04.15</p>
+						</header>
+						<div class="content">
+							<p>I started my creative journey almost 6 years ago and initally that was photography but since has developed to illustration, web development and web design. I have always been a creative person and I got into photography through the Art cource I was studying at school and I choose to specialise in graphic design within that course. I have also studied pure graphic design and computer science as just creating art was never enouch for me, I wanted to learn where that work goes and the value it brings to people and businesses. </p>
+						</div>
+						<footer>
+							<a href="journey.html" class="button alt">Learn More About My Journey</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+		<!-- Photography -->
+			<section id="three" class="wrapper post bg-img" data-bg="Woods.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Photography</h2>
+							<p>14.04.15</p>
+						</header>
+						<div class="content">
+							<p>I started photography almost 6 years ago, it was a world of possibilities and creativity at my feet. In the beginning I just loved the process of taking pictures & editing, things like composition, lighting and even cameras did't phase me. I like to think that attitude is still reflected today because it lets the creativity flourish instead of being bogged down with excuses like <i>my camera isnt good enough for the light here</i>. I still class myself as a hobbiest and am starting to sell some prints of my work.<br><br> If you want to see more of my photography progression you can follow the link below.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">See My Progression</a>
+							<a href="generic.html" class="button alt">Go to Prints</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+		<!-- Web Development -->
+			<section id="two" class="wrapper post bg-img" data-bg="London.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Web Development</h2>
+							<p>22.06.18</p>
+						</header>
+						<div class="content">
+							<p>After completing school with qualifications in art and computer science I wanted to find a way to combine the two, for me this was web development & design. I have developed a range of websites for personal use, educational use and professional use, including this one. There is something oddly satisfying turning my designs and illustrations into dynamic websites for people to see and share through programming. My main skillset is HTML, CSS and JavaScript but I do also have lots of experience in Python.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">See Portfolio</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#three" class="more">Learn More</a>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="wrapper post bg-img" data-bg="peakDistrict.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>About Me</h2>
+							<p>Today</p>
+						</header>
+						<div class="content">
+							<p>I am a young professional who has experience in Photography, Design & Programming, while specialising in Web Development I use Python on a professional level for data analytics and am currently building a web applicaiton with python which brings Machiene Learning and Buisness Analytics togeather. I am also studying Digital & Technology Solutions at university and working as a Technology Solutions Apprentice at Ideagen PLC. I belive I have a creative flair and a great passion for programming.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h2>Contact Me</h2>
+
+					<form method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" >
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" ></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'main/js/jquery.min.js' %}"></script>
+			<script src="{% static 'main/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'main/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'main/js/skel.min.js' %}"></script>
+			<script src="{% static 'main/js/util.js' %}"></script>
+			<script src="{% static 'main/js/main.js' %}"></script>
+
+	</body>
+</html>
